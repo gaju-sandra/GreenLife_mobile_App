@@ -7,33 +7,58 @@ void main() {
 class GreenLifeApp extends StatelessWidget {
   const GreenLifeApp({super.key});
 
- @override
-Widget build(BuildContext context) {
-  String appTitle = ' The Green Life';
+  @override
+  Widget build(BuildContext context) {
+    String appTitle = ' The Green Life';
 
-  return MaterialApp(
-    home: Scaffold(
-      appBar: AppBar(
-        title:Center(child:Text(appTitle, style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold))),
-        backgroundColor: const Color.fromARGB(255, 7, 148, 12),
-        elevation: 4,
-        actions: [
-          TextButton(
-            onPressed: () {},
-            child: Text('Home', style: TextStyle(color: Colors.white))
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: const Color.fromARGB(255, 7, 148, 12),
+          elevation: 4,
+
+          title: Column(
+            children: [
+              Text(
+                appTitle,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  TextButton(
+                    onPressed: () {},
+                    child: Text('Home', style: TextStyle(color: Colors.white)),
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text('About', style: TextStyle(color: Colors.white)),
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Contact',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                ],
+              ),
+            ],
           ),
-          TextButton(
-            onPressed: () {},
-            child: Text('About', style: TextStyle(color: Colors.white))
-            ),
-            TextButton(onPressed: () {}, 
-            child: Text('Contact', style: TextStyle(color: Colors.white))),
-        ],
+        ),
+        body: Column(
+          
+          children: [
+            
+            Text('Welcome to the Green Life'),
+            Text('Trees are important for our environment.'),
+          ],
+        ),
       ),
-      body: Center(
-        child: Text(appTitle),
-      ),
-    ),
-  );
-}
+    );
+  }
 }
