@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../widgets/green_footer.dart';
 import '../widgets/green_header.dart';
-import '../widgets/hero_video.dart';
+
 
 class AboutScreen extends StatelessWidget {
   const AboutScreen({super.key});
@@ -116,37 +116,7 @@ class AboutScreen extends StatelessWidget {
             // VIDEO SECTION
             // =========================
 
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.all(30),
-              child: Column(
-                children: [
-                  const Text(
-                    'Nature and Conservation',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-
-                  const SizedBox(height: 20),
-
-                  const Text(
-                    'Learn more about the beauty of nature and the '
-                    'importance of protecting our environment.',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 18,
-                    ),
-                  ),
-
-                  const SizedBox(height: 30),
-
-                  const HeroVideo(),
-                ],
-              ),
-            ),
+            
 
             // =========================
             // SECOND IMAGE SECTION
